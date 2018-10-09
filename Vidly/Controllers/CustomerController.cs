@@ -35,18 +35,39 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
+
+            /*This viewModel is initialised for populating the membership types in the dropdown 
+              and new instance of customer class is initialised so that the customer id is not null */
+
             var ViewModel = new CustomerFormViewModel()
             {
+                Customer = new Customer(),
                 MembershipTypes = membershipTypes
             };
             return View("CustomerForm",ViewModel);
         }
+
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
+            //For validation of the attributes applied in models 
+            if(!ModelState.IsValid)
+            {
+                var ViewModel = new CustomerFormViewModel
+                {
+                    Customer = customer,
+                    MembershipTypes = _context.MembershipTypes
+                };
+                return View("CustomerForm", ViewModel);
+
+            }
+
+            //For new customers
             if (customer.Id == 0)
                 _context.Customers.Add(customer);
 
+            //For editing customers
             else
             {
                 var CustomerInDb = _context.Customers.Single(c => c.Id == customer.Id);

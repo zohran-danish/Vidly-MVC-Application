@@ -214,6 +214,14 @@
     <Compile Include="Migrations\201809201118251_Genreupdate.Designer.cs">
       <DependentUpon>201809201118251_Genreupdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809301741447_updatenew.cs" />
+    <Compile Include="Migrations\201809301741447_updatenew.Designer.cs">
+      <DependentUpon>201809301741447_updatenew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810061433569_correctingGenrekey.cs" />
+    <Compile Include="Migrations\201810061433569_correctingGenrekey.Designer.cs">
+      <DependentUpon>201810061433569_correctingGenrekey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -221,6 +229,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -293,7 +302,7 @@
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
-    <Content Include="Views\Movie\New.cshtml" />
+    <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -320,6 +329,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809201118251_Genreupdate.resx">
       <DependentUpon>201809201118251_Genreupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809301741447_updatenew.resx">
+      <DependentUpon>201809301741447_updatenew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810061433569_correctingGenrekey.resx">
+      <DependentUpon>201810061433569_correctingGenrekey.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
