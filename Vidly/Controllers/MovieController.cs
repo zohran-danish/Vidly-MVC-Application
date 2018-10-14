@@ -70,7 +70,7 @@ namespace Vidly.Controllers
         }
 
 
-
+        [ValidateAntiForgeryToken]
         [HttpPost]
         public ActionResult Save(Movie movie)
         {
