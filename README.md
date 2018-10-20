@@ -4,7 +4,7 @@ This is a video rental application which is built on Asp.Net MVC.
 
 This can be directly cloned and runned using Visual Studio.
 
-This application has the been build with the following features : 
+This application has been build with the following features : 
 
 1) Model View Controller Architecture
 2) Entity Framework, code first approach.
