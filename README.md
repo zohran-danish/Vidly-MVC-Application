@@ -1,8 +1,7 @@
 # Vidly-MVC-Application
 
 This is a video rental application which is built on Asp.Net MVC.
-
-This can be directly cloned and runned using Visual Studio.
+Clone and run on visual studio to use the application.
 
 This application has been build with the following features : 
 
