@@ -1,5 +1,4 @@
 # Vidly-MVC-Application
-Video Rental application built on Asp.Net MVC 5 and EF6.
 
 This is a video rental application which is built on Asp.Net MVC.
 
